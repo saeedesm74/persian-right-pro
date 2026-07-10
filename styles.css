@@ -1,0 +1,29 @@
+/* کلاس اصلی که با JS به <html> اضافه میشه */
+.prp-rtl-active {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", "IRANSans", "Tahoma", sans-serif !important;
+}
+
+/* اعمال روی اینپوت‌ها و ادیتورها */
+.prp-rtl-active textarea,
+.prp-rtl-active input,
+.prp-rtl-active [contenteditable="true"],
+.prp-rtl-active [class*="message"],
+.prp-rtl-active [class*="chat"],
+.prp-rtl-active [class*="bubble"],
+.prp-rtl-active [class*="response"] {
+  direction: rtl !important;
+  text-align: right !important;
+  font-family: "Vazirmatn", "IRANSans", "Tahoma", sans-serif !important;
+}
+
+/* جلوگیری از به‌هم‌ریختگی کدها و ترمینال */
+.prp-rtl-active pre,
+.prp-rtl-active code,
+.prp-rtl-active [class*="code"],
+.prp-rtl-active [class*="terminal"] {
+  direction: ltr !important;
+  text-align: left !important;
+  font-family: "Fira Code", "Consolas", "Courier New", monospace !important;
+}

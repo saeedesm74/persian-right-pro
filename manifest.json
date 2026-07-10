@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Persian Right Pro",
+  "version": "2.0.0",
+  "description": "افزونه‌ی راست‌به‌چپ‌ساز و فونت فارسی برای چت‌بات‌های هوش مصنوعی مانند ChatGPT، Claude، Gemini و DeepSeek.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [ "storage" ],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*",
+    "https://chat.deepseek.com/*",
+    "https://claude.ai/*",
+    "https://gemini.google.com/*",
+    "https://poe.com/*",
+    "https://you.com/*",
+    "https://www.perplexity.ai/*",
+    "https://www.bing.com/chat*",
+    "https://huggingface.co/*",
+    "https://notebooklm.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*",
+        "https://chat.deepseek.com/*",
+        "https://claude.ai/*",
+        "https://gemini.google.com/*",
+        "https://poe.com/*",
+        "https://you.com/*",
+        "https://www.perplexity.ai/*",
+        "https://www.bing.com/chat*",
+        "https://huggingface.co/*",
+        "https://notebooklm.google.com/*"
+      ],
+      "js": [ "content.js" ],
+      "css": [ "fonts.css", "styles.css" ],
+      "run_at": "document_idle"
+    }
+  ]
+}
